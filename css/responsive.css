@@ -1,0 +1,222 @@
+@media (max-width: 320px) {
+  .header-row {
+	display: none;  
+    justify-content: center !important;
+  }
+  .header-titles {
+    float: left;
+    display: inline-block;
+    padding: 0 5px
+  }
+  .header-titles.img {
+	max-width: 20px;
+  }
+  .header-titles a {
+	font-size: 8px;
+  }
+  .container-wrapper {
+    padding: 30px 15px;
+  }
+  body h1 , .col h1.title {
+    font-size: 2.2em;
+  }
+  body p {
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 320px) and (max-width: 640px) {
+  .head-row header {
+    float: left;
+	width: 100%;
+  }
+  .header-row {
+	display: none;
+    justify-content: center !important;
+  }
+  .header-titles {
+    float: left;
+    display: inline-block;
+    padding: 0 5px
+  }
+  .header-titles.img {
+	max-width: 20px;
+  }
+  .header-titles a {
+	font-size: 8px;
+  }
+  .dot {
+	margin-left: 25px;
+  }
+  .container-wrapper {
+    padding: 30px 15px;
+  }
+  body h1 , .col h1.title {
+    font-size: 2.2em;
+  }
+  body p {
+    font-size: 1.2em;
+  }
+  
+  .blog-item-title a {
+	font-size: 14px;
+  }
+  .blog-item-date {
+    line-height: 36px !important;
+    font-size: 12px !important;
+  }
+  .blog-item-teaser {
+    font-size: 1.2em;
+  }
+  .turn-page .turn-ul {
+    margin: auto;
+	padding: 0;
+  }
+  .plotly.html-widget,
+  .svg-container {
+	overflow: auto;
+  }
+  .turn-page .turn-ul {
+	float: right;
+  }
+  .icon-wrap .ico {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (min-width: 320px) and (max-width: 640px) and (orientation: portrait) {
+  .blog-item-title {
+	line-height: 0.5em;
+	width: 88% !important;
+	min-height: 45px;
+  }
+  .blog-list-item::before {
+    font-size: 20px;
+    margin-top: 2px;
+  }
+  .plotly.html-widget,
+  .svg-container {
+	max-width: 300px !important;
+  }
+  .icon-wrap {
+    padding-right: 0;
+  }
+}
+@media (min-width: 320px) and (max-width: 640px) and (orientation: landscape) {
+  .blog-list-item::before {
+    font-size: 20px;
+    margin-top: 2px;
+  }
+  .blog-list-wrapper-pinned .blog-item-title {
+    background-size: 14px;
+  }
+  .blog-item-title {
+	line-height: 0.5em;
+	width: 95% !important;  
+	height: auto;
+	min-height: 40px;
+  }
+  .plotly.html-widget,
+  .svg-container {
+	max-width: 560px !important;
+  }
+}
+@media (max-width: 767px) {
+  .header-row {
+	 display: none;
+  }
+}
+@media (min-width: 768px) {
+  .header-container {
+	width: 100%;
+  }
+  .mid-cont {
+	float: none;
+	margin: 70px auto auto;
+  }
+  .mob-header,
+  .navbar-toggle,
+  .navbar-collapse {
+    display: none;
+  }
+}
+@media (max-width: 812px) and (orientation: landscape) {
+  .header-container {
+    padding: 60px 0;
+  }
+  .header-titles {
+    padding: 0 15px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .head-row header {
+    float: left;
+	width: 100%;
+  }
+  .header-titles {
+    padding: 0 15px;
+  }
+  .dots.dropdown-toggle {
+	margin-top: -5px;
+  }
+  .header-container .dropdown-menu {
+	left: -75px;
+  }
+  .blog-item-title {
+	width: 96% !important;
+  }
+  .plotly.html-widget,
+  .svg-container {
+	overflow: auto;
+  }
+  .turn-page .turn-ul {
+	float: right;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .blog-item-title {
+	max-wdith: 380px;
+  }
+  .plotly.html-widget,
+  .svg-container {
+	max-width: 353px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .header-titles {
+    padding: 0 20px;
+  }
+  .dots.dropdown-toggle {
+	margin-left: 40px;
+  }
+  .blog-item-title {
+	max-wdith: 534px;
+  }
+  .plotly.html-widget,
+  .svg-container {
+	max-width: 530px !important;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  .dots.dropdown-toggle {
+	margin-left: 52px;
+  }
+}
+@media (min-width: 1025px) {
+  .dots.dropdown-toggle {
+	margin-left: 52px;
+	margin-top: -5px;
+  }
+  .header-container .dropdown-menu {
+	left: -75px;
+  }
+  .row.header-row {
+    max-width: 1016px;
+    float: none;
+    margin: auto;
+  }
+}
+@media (min-device-width: 1100px) {
+  main .container-wrapper:first-child {
+    min-width: 1012px;
+  }
+}

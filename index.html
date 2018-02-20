@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes on the Negative binomial distribution</title>
+  <link rel="shortcut icon" href="images/728358_writing_512x512.png">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
+</head>
+<body>
+  <!--Header-->
+<div class="row justify-content-center no-gutters head-row">
+ <header id="header col">
+  <div class="container header-container">
+  <div class="mob-header">
+    <div class="mob-logo"><a href="/"><img src="images/A-logo.svg" class="A-logo"></a></div>
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/content/pages/about">About</a></li>
+        <li><a href="https://github.com/armaninspace">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/arman-anwar-a107961/">LikedIn</a></li>
+        <li><a href="/content/pages/blogs">Random</a></li>
+        <li><a href="https://twitter.com/armaninspace">Twitter</a></li>
+          <li><a class="" href="/content/pages/about">About</a></li>
+          <li><a class="" href="/content/pages/blogs">Blogs</a></li>
+      </ul>
+    </div>
+  </div>
+   <div class="row justify-content-between align-items-center no-gutters header-row">
+     <div class="header-titles">About</div>
+     <div class="header-titles">GitHub</div>
+     <div class="header-titles">LikedIn</div>
+     <div class="header-titles img"><a href="/"><img src="images/A-logo.svg" class="A-logo"></a></div>
+     <div class="header-titles push-1">Random</div>
+     <div class="header-titles">Twitter</div>
+     <div class="dropdown">
+      <div class="dots dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       <div class="dot"></div>
+       <div class="dot"></div>
+       <div class="dot"></div>
+    </div>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a class="dropdown-item dropdown-child">Hello</a></li>
+          <li><a class="dropdown-item dropdown-child">Hello</a></li>
+          <li><a class="dropdown-item dropdown-child">Hello</a></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+ </header>
+</div>
+
+ <!--Wrapper-->
+ <div class="row justify-content-center no-gutters">
+  <main class="content" role="main">
+  <div class="container container-wrapper col-md-8 col-sm-12 col-xs-12 mid-cont">
+    <div class="col">
+     <h1 class="heading-wrapper text-center">Notes on the Negative binomial distribution</h1>
+     <p class="article first-paragraph text-left">
+       A generalization of a geometric distribution. Negative binomial distribution describes the number of successes in a sequence of independent experiments performed until the
+      r−th failure. Formally, let
+      ξ1,ξ2,… are results of experiments (that is all
+      ξ are independent and have Bernoulli distribution).
+      Sn=ξ1+…+ξn is the cumulative sum of
+      ξ′s that represents the number of successes. The fact that there were r failures can be written as
+      Sn=n−r.
+      So, the negative binomial random variables is </p>
+<div class="example-container container col no-padding">
+<div class="example-wrapper row justify-content-center no-gutters">
+  <p class="example">
+X = S τ , τ = min { n ≥ 1 : S n = n − r }
+</p>
+</div>
+</div>
+<p class="article text-left">
+  
+  (here τ is the number of the last experiment, when
+r-th failure occured).
+
+Parameters:
+r – number of failures after which we stop performing experiments,
+p – probability of a success in a single experiment.
+
+
+<br>Values:
+{0,1,2,...}.
+<br>
+Probability mass function:
+</p>
+<div class="container example-container col no-padding">
+<div class="example-wrapper  row justify-content-center no-gutters">
+  <p class="example">
+    
+    P ( X = k ) = ( k + r − 1 k ) p k ( 1 − p ) r , k ≥ 0.
+  
+  </p>
+</div>
+</div>
+  <h1 class="text-center" style="padding: 7px; font-size: 3.5em;">Derivation</h1>
+  <p class="article text-left">
+    The event
+   X=k means that when the
+  r-th failure occurd there were exactly
+  k successes. In particular it means that the process stoped at
+  (k+r)-th experiment:
+  </p>
+  <div class="container example-container col no-padding">
+<div class="example-wrapper row justify-content-center no-gutters">
+  <p class="example">
+
+P(X=k)=P(τ=k+r,Sk+r=k)=
+</p>
+</div>
+</div>
+<p class="article text-left">The last experiment is a failure:</p>
+<div class="container example-container col no-padding">
+<div class="example-wrapper row justify-content-center no-gutters">
+  <p class="example">
+
+=P(ξk+r=0,Sk+r−1=k)=
+</p>
+</div>
+</div>
+<p class="article text-left">By independence:</p>
+<div class="container example-container col no-padding">
+<div class="example-wrapper row justify-content-center no-gutters">
+  <p class="example">
+
+=(1−p)P(Sk+r−1=k)=
+</p>
+</div>
+</div>
+<p class="article text-left">The sum has a binomial distribution:</p>
+<div class="container example-container col no-padding">
+<div class="example-wrapper row justify-content-center no-gutters">
+  <p class="example">
+
+=(1−p)(k+r−1k)pk(1−p)(r−1)=(k+r−1k)pk(1−p)r.
+</p>
+</div>
+</div>
+<p class="article text-left">Moment generating function: </p>
+<div class="container example-container col no-padding">
+<div class="example-wrapper row justify-content-center no-gutters">
+  <p class="example">
+
+M ( t ) = ( 1 − p ) r ( 1 − p e t ) r , t < ln 1 p
+</p>
+</div>
+</div>
+<h1 class="text-center" style="padding: 7px; font-size: 3.5em;">Proof</h1>
+  <p class="article text-left">
+   M(t)=EetX=
+<br>
+Using probability mass function:
+</p>
+<div class="container example-container col no-padding">
+<div class="example-wrapper row justify-content-center no-gutters">
+  <p class="example">
+
+= ∞ ∑ k = 0 e t k ( k + r − 1 k ) p k ( 1 − p ) r = ( 1 − p ) r ∞ ∑ k = 0 ( k + r − 1 k ) ( p e t ) k =
+</p>
+</div>
+</div>
+<p class="article text-left">The sum is a Taylor expansion of
+1(1-x)r around
+0, evaluated at
+x=pet (condition on
+t ensures convergence)</p>
+<div class="container example-container col no-padding">
+<div class="example-wrapper row justify-content-center no-gutters">
+  <p class="example">
+= ( 1 − p ) r ( 1 − p e t ) r
+</p>
+</div>
+</div>
+<p class="article text-left">Expectation:
+EX=pr1-p.</p>
+
+<p class="article text-left">Variance:
+V(X)=pr(1-p)2.</p>
+<h1 class="text-center" style="padding: 7px; font-size: 3.5em;">Derivation</h1>
+<p class="article text-left">Expectation is the first derivative
+M'(0). We have:</p>
+<div class="container example-container col no-padding">
+<div class="example-wrapper row justify-content-center no-gutters">
+  <p class="example">
+
+M′(t)=rp(1−p)ret(1−pet)r+1
+ EX=M′(0)=pr1−p
+  
+  </p>
+</div>
+</div>
+<p class="article text-left">Second moment is the second derivative M?(0). We have: </p>
+<div class="container example-container col no-padding">
+<div class="example-wrapper row justify-content-center no-gutters">
+  <p class="example">
+
+M″(t)=rp(1−p)ret(1−pet)r+1+r(r+1)p2(1−p)re2t(1−pet)r+2
+ EX2=pr1−p+r(r+1)p2(1−p)2
+  
+  </p>
+</div>
+</div>
+<p class="article text-left">Variance is</p>
+<div class="container example-container col no-padding">
+<div class="example-wrapper row justify-content-center no-gutters">
+  <p class="example">
+   
+   V ( X ) = p r 1 − p + r p 2 ( 1 − p ) 2 = p r ( 1 − p ) 2
+  
+  </p>
+</div>
+</div>
+   </div>
+  <div class="row justify-content-center col-xs-12 arrow-cont">
+   <img src="images/Arrow-Up-icon.png" class="arrow-up offset-md-2">
+   <div class="row justify-content-around col-md-3 col-xs-5 push-3 icon-wrap">
+     <a href="https://twitter.com/armaninspace"><img src="images/twitter.ico" class="ico"></a>
+     <a href="https://facebook.com"><img src="images/facebook.svg" class="ico ico-fb"></a>
+     <a href="https://www.linkedin.com/in/arman-anwar-a107961/"><img src="images/linkedin.ico" class="ico"></a>
+   </div>
+   </div>
+</div>
+</main>
+ <footer id="footer">
+   <img src="images/footer1.png">
+ </footer>
+</body>
+<script src="js/jquery-3.js"></script>
+<script src="js/bootstrap.min.js">
+</script>
+<script src="js/scrollToView.js"></script>
+<script src="js/DotsMenuDropdown.js"></script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</html>
